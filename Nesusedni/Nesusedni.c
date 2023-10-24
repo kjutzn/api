@@ -4,12 +4,9 @@ int main() {
     int n1,n2;
     char c1, c2;
 
-    printf("Unesite Perino i Petrino omiljeno slovo: ");
     scanf("%c%c", &c1, &c2);
-
-    printf("Unesite broj Perinih i Petrinih omiljenih slova: ");
     scanf("%d %d", &n1, &n2);
-    
+
     if (n1 == n2) {
         for (int i = 0; i < n1; i++)
         {
@@ -24,7 +21,7 @@ int main() {
         }
         printf("%c", c1);
     }
-    
+
     else if ((n2 > n1) && (n2 == n1 + 1)) {
         for (int i = 0; i < n1; i++)
         {
@@ -32,10 +29,10 @@ int main() {
         }
         printf("%c", c2);
     }
-    
+
     else {
-        printf("Nemoguce\n");
+        printf("Nemoguce");
     }
-    
+
     return 0;
 }
