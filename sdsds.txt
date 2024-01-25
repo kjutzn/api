@@ -4,17 +4,14 @@ class Program
 {
     static void Main()
     {
-        int[] ocene = new int[5];
+        int n = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < 5; i++)
+        int ukbr = 1;
+        for (int i = 1; i <= n; i++)
         {
-            Console.WriteLine("Unesite ocenu za kontrolni broj {0}:", i + 1);
-            ocene[i] = Convert.ToInt32(Console.ReadLine());
+            ukbr *= i;
         }
 
-        Array.Sort(ocene);
-
-        double prosecnaOcena = (ocene[1] + ocene[2] + ocene[3] + ocene[4]) / 4.0;
-        Console.WriteLine("Prosečna ocena bez najlošije ocene: {0:F2}", prosecnaOcena);
+        Console.WriteLine(ukbr);
     }
 }
