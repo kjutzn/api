@@ -1,0 +1,346 @@
+A2
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(n+1);
+        }
+    }
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        pn(a, n);
+        isn(a, n);
+        Console.WriteLine("Trazeni elementi:");
+        for(int i=0;i<n;++i)
+        {
+            if (a[i] < i+1)
+                Console.WriteLine(a[i]);
+        }
+        //Console.ReadLine();
+    }
+}
+
+
+
+A3
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(n+1);
+        }
+    }
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        pn(a, n);
+        isn(a, n);
+        int zb=0;
+        for(int i=0;i<n;++i)
+        {
+            if (a[i] < i + 1)
+                zb += a[i];
+        }
+        Console.WriteLine(zb);
+        //Console.ReadLine();
+    }
+}
+
+
+A5
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n, int kor)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(-150,150) + kor;
+        }
+    }
+
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        int i1 = int.Parse(Console.ReadLine());
+        int i2 = int.Parse(Console.ReadLine());
+        pn(a, n, -50);
+        isn(a, n);
+        int zb=0;
+        for (int i=i1;i<=i2;++i)
+        {
+            if (a[i] < 0)
+                zb++;
+        }
+        Console.WriteLine(zb);
+        Console.ReadLine();
+    }
+}
+
+
+
+A7
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n, int kor)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(-150,150) + kor;
+        }
+    }
+
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        pn(a, n, 0);
+        isn(a, n);
+        int neg=0,poz=0;
+        for (int i = 0; i < n; ++i)
+        {
+            if (a[i] < 0)
+            {
+                neg++;
+            }
+            else
+            {
+                poz++;
+            }
+        }
+        if (poz > neg)
+            Console.WriteLine("Pozitivnih");
+        else if (poz < neg)
+            Console.WriteLine("Negativnih");
+        else
+            Console.WriteLine("Podjednako");
+        Console.ReadLine();
+    }
+}
+
+
+A8
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n, int kor)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(-150,150) + kor;
+        }
+    }
+
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        pn(a, n, 0);
+        isn(a, n);
+        int poz=0,zb=0;
+        for (int i = 0; i < n; ++i)
+        {
+            if (a[i] > 0)
+            {
+                zb+=a[i];
+                poz++;
+            }
+        }
+        double sr = (double)zb / (double)poz;
+        Console.WriteLine(sr);
+        Console.ReadLine();
+    }
+}
+
+
+A11
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n, int kor)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(-150,150) + kor;
+        }
+    }
+    static void pn1(int[] a, int n, int m)
+    {
+        Random rand = new Random();
+        for (int i = 0; i < n; ++i)
+        {
+            a[i] = rand.Next(0,m);
+        }
+    }
+
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        int m = int.Parse(Console.ReadLine());
+        int[] b = new int[m];
+        pn(a, n, 0);
+        pn1(b, m, n);
+        isn(a, n);
+        int poz=0,zb=0;
+        Console.WriteLine("Elementi niza: ");
+        for (int i = 0; i < m; ++i)
+        {
+            Console.WriteLine(a[b[i]]);
+        }
+        Console.ReadLine();
+    }
+}
+
+A13
+
+using System;
+
+class Program
+{
+    static void pn(int[] a, int n, int kor)
+    {
+        Random rand = new Random();
+        for (int i=0;i<n;++i)
+        {
+            a[i] = rand.Next(-150,150) + kor;
+        }
+    }
+    static void pn1(int[] a, int n, int m)
+    {
+        Random rand = new Random();
+        for (int i = 0; i < n; ++i)
+        {
+            a[i] = rand.Next(0,m);
+        }
+    }
+
+
+    static void isn(int[] a, int n)
+    {
+        Console.WriteLine("Elementi niza: ");
+        for (int i=0;i<n;++i)
+        {
+            Console.Write(a[i]+" ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        bool pr = true;
+        bool jeste = true;
+        a[0] = int.Parse(Console.ReadLine());
+        for (int i=1;i<n;++i)
+        {
+            a[i]=int.Parse(Console.ReadLine());
+            if (a[i] < a[i-1] && pr)
+            {
+                jeste = false;
+                pr = false;
+            }
+        }
+        if (jeste)
+            Console.WriteLine("Neopadajuć");
+        else
+            Console.WriteLine("Nije neopadajuć");
+        Console.ReadLine();
+    }
+}
